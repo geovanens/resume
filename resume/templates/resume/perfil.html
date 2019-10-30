@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Perfil</title>
+</head>
+<body>
+    {% if data %}
+        <img src="{{ data.foto }}" alt="{{ data.nome }}">
+        <p></p>
+        <p>{{ idade }} anos</p>
+        <p>{{ data.telefone }}</p>
+        <p>{{ data.email }}</p>
+        <p>{{ data.endereco }}</p>
+        <p>{{ data.celular }}</p>
+        <a href="{{ data.linkedin }}" target="_blank">Linkedin</a>
+        <a href="{{ data.github }}" target="_blank">Github</a>
+        <p>{{ data.descricao }}</p>
+    {% else %}
+        <p>Perfil Indisponivel.</p>
+    {% endif %}
+    
+</body>
+</html>
