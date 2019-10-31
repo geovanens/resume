@@ -2,14 +2,16 @@
 
 {% block content %}
     {% if data %}
-        <p>{{ idade }} anos</p>
-        <p>{{ data.telefone }}</p>
-        <p>{{ data.email }}</p>
-        <p>{{ data.endereco }}</p>
-        <p>{{ data.celular }}</p>
-        <a href="{{ data.linkedin }}" target="_blank">Linkedin</a>
-        <a href="{{ data.github }}" target="_blank">Github</a>
-        <p>{{ data.descricao }}</p>
+		<div class="listProfile">
+			<p>{{ idade }} anos</p>
+			<p>{{ data.telefone }}</p>
+			<p>{{ data.email }}</p>
+			<p>{{ data.endereco }}</p>
+			<p>{{ data.celular }}</p>
+			<a href="{{ data.linkedin }}" target="_blank">Linkedin</a>
+			<a href="{{ data.github }}" target="_blank">Github</a>
+			<p>{{ data.descricao }}</p>
+		</div>
     {% else %}
         <p>Perfil Indisponivel.</p>
     {% endif %}

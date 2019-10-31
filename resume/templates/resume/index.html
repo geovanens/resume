@@ -14,13 +14,9 @@
         <p>GEOVANE SILVA RESUMÉ</p>
 
     <div class="colunas">
-        <div class="info">
-            {% block content %}
-            {% endblock %}
-        </div>
         <div class="menu">
             <div class="photo">
-                <img src="{{ data.foto }}" alt="{{ data.nome }}" height="500" width="500">
+                <img src="{{ foto }}" height="500" width="500">
             </div>
             <div class="options">
                 <a href="/resume/">Inicio</a>
@@ -28,6 +24,16 @@
                 <a href="/resume/profissional">Profissional</a>
                 <a href="/resume/academico">Academico</a>
             </div>
+        </div>
+		<div class="info">
+            {% block content %}
+				<div class="init">
+					<p>Seja bem vindo ao meu curriculo online. 
+						Sinta-se à vontade para entrar em contato
+						por email ou telefone para mais informações.
+					</p>
+				</div>
+            {% endblock %}
         </div>
     </div>
     </div>

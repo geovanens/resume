@@ -2,26 +2,28 @@
 
 {% block content %}
     {% if data %}
-        {% for trab in data %}
-            <img 
-                src="{{ trab.logo_empresa }}" alt="{{ trab.nome_empresa }}"
-                height="60" width="60"
-            >
-            <p>{{ trab.tipo }}</p>
-            <p>{{ trab.cargo }}</p>
-            <p>{{ trab.nome_empresa }}</p>
-            <p>
-                {{ trab.inicio }} - 
-                {% if trab.finalizado %}
-                    {{ trab.fim }}
-                {% else %}
-                    Atual
-                {% endif %}
+		<div class="listWorks">
+			{% for trab in data %}
+				<img 
+					src="{{ trab.logo_empresa }}" alt="{{ trab.nome_empresa }}"
+					height="60" width="60"
+				>
+				<p>{{ trab.tipo }}</p>
+				<p>{{ trab.cargo }}</p>
+				<p>{{ trab.nome_empresa }}</p>
+				<p>
+					{{ trab.inicio }} - 
+					{% if trab.finalizado %}
+						{{ trab.fim }}
+					{% else %}
+						Atual
+					{% endif %}
 
-            </p>
-            <p>{{ trab.descricao }}</p>
-            <p>{{ trab.tecnologias }}</p>
-        {% endfor %}
+				</p>
+				<p>{{ trab.descricao }}</p>
+				<p>{{ trab.tecnologias }}</p>
+			{% endfor %}
+		</div>
     {% else %}
         <p>Página Indisponivel.</p>
     {% endif %}

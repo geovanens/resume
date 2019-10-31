@@ -21,6 +21,28 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+	height: 80vh;
+	overflow: auto;
+}
+
+.init {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	
+}
+
+.listProfile {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	color: green
+}
+
+.listWorks {
+	margin-top: 100px;
 }
 
 .photo {
