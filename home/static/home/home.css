@@ -7,6 +7,10 @@ html, body, #wrapper {
     text-align: center;
 }
 
+img {
+    border-radius: 50%
+}
+
 .image {
     position: absolute;
     width: 15%;

@@ -1,13 +1,35 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="{% static 'resume/index.css' %}">
     <title>Resume</title>
 </head>
 <body>
-    <a href="/resume/perfil">Perfil</a>
-    <a href="/resume/profissional">Profissional</a>
+    <div class="title">
+        <p>GEOVANE SILVA RESUMÉ</p>
+
+    <div class="colunas">
+        <div class="info">
+            {% block content %}
+            {% endblock %}
+        </div>
+        <div class="menu">
+            <div class="photo">
+                <img src="{{ data.foto }}" alt="{{ data.nome }}" height="500" width="500">
+            </div>
+            <div class="options">
+                <a href="/resume/">Inicio</a>
+                <a href="/resume/perfil">Perfil</a>
+                <a href="/resume/profissional">Profissional</a>
+                <a href="/resume/academico">Academico</a>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
 </html>

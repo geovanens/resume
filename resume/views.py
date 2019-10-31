@@ -3,12 +3,14 @@ from django.http import HttpResponse
 
 from datetime import datetime, date
 
-from .models import Perfil, Profissional
+from .models import Perfil, Profissional, Academico
 
 # Create your views here.
 
 def index(request):
-    context = {}
+    obj = Perfil.objects.all()[0]
+    context = {'data': obj}
+    print("Index", context['data'].foto)
     return render(request, 'resume/index.html', context)
 
 def perfil(request):
@@ -23,3 +25,8 @@ def profissional(request):
     obj = Profissional.objects.all()
     context = {'data': obj}
     return render(request, 'resume/profissional.html', context)
+
+def academico(request):
+    obj = Academico.objects.all()
+    context = {'data': obj}
+    return render(request, 'resume/academico.html', context)

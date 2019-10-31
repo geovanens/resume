@@ -37,3 +37,17 @@ class Formacao(models.Model):
     inicio = models.DateField()
     fim = models.DateField()
     finalizado = models.BooleanField(default=False)
+
+class Academico(models.Model):
+    titulo = models.CharField(max_length=200)
+    descricao = models.TextField()
+    orientador = models.URLField()
+    inicio = models.DateField()
+    fim = models.DateField()
+    finalizado = models.BooleanField(default=False)
+
+class Portifolio(models.Model):
+    titulo = models.CharField(max_length=200)
+    descricao = models.TextField()
+    link = models.URLField()
+    tecnologias = models.TextField()
