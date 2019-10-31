@@ -11,6 +11,7 @@ class Profissional(models.Model):
     fim = models.DateField()
     descricao = models.TextField()
     tecnologias = models.TextField()
+    finalizado = models.BooleanField(default=False)
 
 class Perfil(models.Model):
     foto = models.URLField()
@@ -23,3 +24,16 @@ class Perfil(models.Model):
     linkedin = models.URLField()
     github = models.URLField()
     descricao = models.TextField()
+
+class Tecnologia(models.Model):
+    foto = models.URLField()
+    nome = models.CharField(max_length=200)
+    categoria = models.CharField(max_length=200)
+
+class Formacao(models.Model):
+    titulo = models.CharField(max_length=200)
+    nome_instituicao = models.CharField(max_length=200)
+    foto_instituicao = models.URLField()
+    inicio = models.DateField()
+    fim = models.DateField()
+    finalizado = models.BooleanField(default=False)
